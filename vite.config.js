@@ -20,4 +20,7 @@ export default defineConfig({
       dts: 'src/auto-imports.d.ts', // Ensure this path is correct
     }),
   ],
+  build: {
+    outDir: 'build', // Specify the output directory for Vite
+  },
 });
