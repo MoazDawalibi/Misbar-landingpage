@@ -1,0 +1,25 @@
+.FooterTItleWithSeparator{
+    position: relative;
+    h1{
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    hr{
+        width: 44px;
+        opacity:1;
+        border: 1px solid gray ;
+        margin: 10px 0 20px 0 !important;
+        border-radius: 5px;
+        &::after {
+            width: 15px;height: 3px;
+            border-radius: 5px;
+            position: absolute;
+            background: var(--primary);
+            content: "";
+            // bottom: 0px !important;
+            left:0;
+          }
+    }
+}

@@ -1,0 +1,44 @@
+.info{
+    width: 100%;
+    position: relative;
+    .info_image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: .2;
+    } 
+    .info_content{
+        position: relative;
+        width: 90%;
+        display: flex;justify-content: center; flex-direction: column;
+        margin-inline: auto;
+        .first_link ,.header_link_svg{
+            color: var(--text);
+        }
+        h1{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 14px;
+            color: var(--DarkGray);
+            line-height: 30px;
+            letter-spacing: .3px;
+            padding-block: 30px 50px;
+        }
+    }  
+}
+@media screen and (max-width:500px) {
+    .info{
+        .info_content{
+            h1{
+                font-size: 18px;
+            }
+            p{
+                font-size: 11px;
+                padding-block: 10px 20px;
+                line-height: 20px;
+            }
+        }
+    }
+}

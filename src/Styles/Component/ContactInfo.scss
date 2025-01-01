@@ -1,0 +1,19 @@
+.single_contact_info{
+    display: flex; align-items: center;
+    .MediaButton{
+        margin-right: 12px;
+        background: var(--primary);
+        color: var(--white);
+    }
+    div{
+        h2{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 !important;
+        }
+        p{
+            font-size: 16px;
+            color: var(--DarkGray);
+        }
+    }
+}

@@ -1,0 +1,1 @@
+import{g as s,j as i}from"./index-CR_WAB_6.js";import{I as n}from"./Info-CyglTGOB.js";import"./HeaderLink-BOFFPC7N.js";const c=()=>{const{data:t,isLoading:e}=s("api/home"),o=t==null?void 0:t.Static_info[1];return i.jsx(n,{headerText:"Terms & Conditions",title:o==null?void 0:o.key,response:o==null?void 0:o.value,isLoading:e})};export{c as default};

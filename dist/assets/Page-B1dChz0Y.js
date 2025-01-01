@@ -1,0 +1,1 @@
+import{g as a,j as t}from"./index-CR_WAB_6.js";import{A as e}from"./About-Ojsi3gUj.js";import"./CustomTitle-CLlljgd4.js";import"./index.esm-Cj_iJVAr.js";import"./HeaderLink-BOFFPC7N.js";const u=()=>{const{data:o,isLoading:r}=a("api/home");return t.jsx(t.Fragment,{children:t.jsx(e,{data:o,isHaveHeader:!0,isLoading:r})})};export{u as default};

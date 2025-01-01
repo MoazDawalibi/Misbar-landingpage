@@ -1,0 +1,103 @@
+.project_card{
+    @include Flex; flex-direction: column;
+    position: relative;
+    padding-top: 15px;
+    border-block: 1.5px solid var(--DarkGray);
+    .project_card_container{
+        position: relative;
+        .images{
+            width: 100%;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                background-color: rgba(0, 0, 0, 0.381);
+                left: 0;
+                opacity: 0;
+                top: 0;
+                transition: .3s ease-in-out;
+            }
+
+            .main_img,.hover_img{
+                width: 367px;
+                height: 230px;
+            }
+            .hover_img{
+                position: absolute;
+                top: 0;left: 0;
+                visibility: hidden;
+            }
+            .buttons{
+                width: 100%;
+                display: flex;
+                justify-content: center;align-items: center;
+                position: absolute;
+                top: 50%;right: 50%;
+                transform: translate(50%,-50%);
+                opacity: 0;
+                transition: ease-in-out .3s;
+                z-index: 9999;
+                .button{
+                    width: 120px;
+                    margin-inline: 5px;
+                    position: relative;
+                }
+            }
+        }
+    }
+    h1{
+        text-align: center;
+        padding-block: 16px 4px;
+        font-size: 17px;
+        border-bottom: 1px  solid transparent;
+        transition: ease-in-out .3s;
+    }
+    
+    &:hover{  
+        .images{            
+            &::after{
+                opacity: 1;
+            }
+            .main_img{
+                opacity: 0;
+            }
+            .hover_img{
+                visibility: visible;
+            }
+        }  
+        .buttons{
+            opacity: 1 !important;
+        }
+        h1{
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .project_card{
+        .project_card_container{
+            .images{
+                .main_img,.hover_img{
+                    width: 280px;
+                    height: 170px;
+                }
+                .buttons{
+                    .button{
+                        width: 100px;
+                        p{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        h1{
+            padding-block: 12px 4px;
+            font-size: 17px !important;
+        }
+    }
+}

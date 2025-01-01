@@ -1,0 +1,33 @@
+.Custom_Title{
+    display: flex;align-items: center;
+    &::before{
+        content: "";
+        width: 140px;
+        height: 2.5px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, var(--primary) -8.57%, rgba(80, 163, 239, 0) 100%);
+        rotate: 180deg;
+    }
+    p{
+        margin-bottom: 0;
+        padding-inline: 8px;
+        color: var(--primary);
+        text-transform: uppercase;
+        font-weight: 550;
+    }
+    &::after{
+        content: "";
+        width: 140px;
+        height: 2.5px;
+        border-radius: 12px;
+        background: linear-gradient(90deg, var(--primary) -8.57%, rgba(80, 163, 239, 0) 100%);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .Custom_Title{
+        &::before ,&::after{
+            width: 80px;
+        }
+    } 
+}

@@ -1,0 +1,122 @@
+.header_container{
+    height: 76px;
+    width: 100%;
+    display: flex;align-items: center;justify-content: space-around;
+    .image_container{
+        img{
+            width: 50px;
+        }
+    }
+    .Header_links{
+        display:flex;
+        .Link{
+            display: flex;justify-content: center;align-items: center;
+            border-right: 2px solid #CCCCCC;
+            padding-inline: 2.5vw;
+            h4{
+                @include underLineText(#50A3EF00,var(--primary));
+                font-size:1vw;
+                font-weight: bold;
+                letter-spacing: .5px;
+            }
+        }
+        .Link:last-child{
+            border-right: 0px !important;
+        }
+    }
+    .button_container{
+        width: 150px;
+    }
+    .menu_nav{
+        display: none;
+        .ant-btn-primary{
+            background: transparent;
+            box-shadow: 0px 0 0 ;
+            &:hover{
+                background: transparent;
+            }
+            svg{
+                color: var(--DarkGray);
+                font-size: 30px;
+            }
+        }
+    }
+}
+.header_logo{
+    width: 80%;
+    display: flex;align-items: end;justify-content: end;
+    margin-inline:auto;
+    margin-bottom: 10px;
+}
+
+.nav_link_drawer{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    p{
+        width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+    z-index: 99999 !important;
+    .drawer_link{
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        font-size: 14px;
+        padding-left: 10px !important;
+        width: 100%;
+        padding: 8px 18px; 
+        border-radius: 10px;
+
+        svg{
+            margin-right: 10px;
+        }
+        &:hover{
+            color: var(--white);
+            background: var(--primary);
+        }
+    }
+    .active_link{
+        color: var(--white);
+        background: var(--primary);
+        border-radius: 10px;
+    }
+}
+
+ul{
+    margin-bottom: 0;
+    padding-left: 0px !important;
+}
+
+.ant-float-btn-primary .ant-float-btn-body{
+    background: var(--primary) !important;
+}
+.ant-drawer-body{
+    padding:  0 !important;
+    padding-top: 20px !important;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .header_container{
+        width: 90vw;
+         margin-inline: auto ;
+        justify-content: space-between;
+        .Header_links{
+            display: none;
+        }
+        .menu_nav{
+            display: inline;
+        }
+        .button_container{
+            display: none;
+        }
+    }
+    .button_container_menu_nav{
+        width: 170px !important;
+    }
+}

@@ -1,0 +1,22 @@
+.SingleLink{
+    margin-bottom: 10px;
+    .link{
+        display: flex;
+        transition: ease-in-out .4s;
+        div{
+            width: 22px;
+        }
+        svg{
+            color: var(--secondary);
+            font-size: 20px;
+        }
+        h5{
+            opacity: .7;
+            text-transform: capitalize;
+            font-size: 15px;
+        }
+        &:hover{
+            margin-left: 15px;
+        }
+    }
+}

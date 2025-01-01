@@ -1,0 +1,1 @@
+import{g as e,j as t}from"./index-CR_WAB_6.js";import{C as r}from"./Contact-DRM-DWvq.js";import"./HeaderLink-BOFFPC7N.js";import"./CustomTitle-CLlljgd4.js";import"./index.esm-Cj_iJVAr.js";const p=()=>{const{data:a,isLoading:o}=e("api/home");return t.jsx("div",{className:"contact_container",children:t.jsx(r,{isLoading:o,data:a,isHaveHeader:!0})})};export{p as default};

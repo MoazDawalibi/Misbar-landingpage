@@ -1,0 +1,19 @@
+
+@import './Variables.scss';
+@import './Mixing.scss';
+@import './App.scss';
+@import '../Layout/Layout.scss';
+
+@import '../Layout/Header.scss';
+@import '../Layout/Footer.scss';
+
+@import '../Component/index.scss';
+@import '../Pages/index.scss';
+
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../../../public/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

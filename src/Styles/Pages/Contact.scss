@@ -1,0 +1,97 @@
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 130px;
+    position: relative;
+    min-height: 90vh;
+
+    .contact_image{
+        width: 100%;
+        height: 100%;
+        position: absolute;   
+        left: 0;
+    }
+
+    .contact_container{
+        padding-top: 20px;
+       width: 90%;
+       margin-inline: auto;
+       z-index: 99 !important;
+       .contact_section{
+            display: flex; justify-content: space-between;
+            padding-bottom: 50px;
+            .image_container{
+                width: 32%;
+                img{
+                    width: 100%;
+                }
+            }
+            .right{
+                width:60%;
+                .Custom_Title{
+                    p{
+                        padding-left: 0;
+                    }
+                    &::before{
+                        display: none;
+                    }
+                }
+                h1{
+                    font-weight: 700;
+                    font-size: 35px;
+                    padding-bottom: 25px;
+                    span{
+                        font-weight: normal;
+                    }
+                }
+                > p{
+                    color: var(--DarkGray);
+                    font-size: 13.5px;
+                    letter-spacing: .2px;
+                }
+                .button_container{
+                    width: 160px;
+                }
+            }
+       }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .contact{
+        .contact_container{
+            .contact_section{
+                display: flex;align-items: center;justify-content: center;
+                flex-direction: column-reverse !important;
+                padding-bottom: 0;
+                .image_container,
+                .right{
+                    margin-bottom: 20px;
+                    text-align: center;
+                    width: 100%;
+                    img{
+                        width: 270px;
+                    }
+                    .Custom_Title{
+                        justify-content: center;
+                    }
+                    .button_container{
+                        @include Flex;
+                        width: 100%;
+                        .button{
+                            width: 155px;
+                        }
+                    }
+                    h1{
+                        font-size: 20px;
+                        padding-bottom: 5px;
+                    }
+                    > p{
+                        font-size: 10.5px;
+                    }
+                }
+            }
+        }
+    }
+}

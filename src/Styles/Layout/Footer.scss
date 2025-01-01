@@ -1,0 +1,120 @@
+.footer_contianer{
+    width: 100%;
+    position: relative;
+    .footer_image{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        opacity: .06;
+    }
+    .Footer{
+        width: 90%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center !important;
+        padding-block: 90px;
+    }
+    .logo_section{
+        z-index: 999999;
+        width: 25%;
+        p{
+            font-size: 15px;
+            margin-top: 10px;
+            opacity: .7;
+        }
+    }
+    .media_container{
+        display: flex;
+        .MediaButton{
+            margin-right: 10px;
+            background: transparent;
+            &:hover{
+                background: var(--primary);
+            }
+        }
+    }
+
+    .home_links_section ,
+    .service_links_section,
+    .contact_links_section,
+    .quick_links_section{
+        z-index: 999999;
+        height: 143px;
+        border-left: 1.5px solid var(--WhiteGray);
+        padding-left: 25px;
+    }
+    .home_links_section{
+        width: 10%;
+    }
+    .service_links_section{
+        width: 15%;
+    }
+    .contact_links_section{
+        width: 20%;
+        .responsive_sections{
+            display: none;
+        }
+    }
+    .quick_links_section{
+        width: 18%;
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .footer_contianer{
+        .Footer{
+            align-items: start !important;
+            flex-wrap: wrap;
+        }
+        .home_links_section ,
+        .service_links_section,
+        .contact_links_section,
+        .quick_links_section,
+        .logo_section{
+            margin-top: 20px;
+            width: 40%;   
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .footer_contianer{
+        .Footer{
+            width: 90%;
+            margin-inline: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center !important;
+            flex-direction: column;
+            padding-block: 50px 180px;
+        }
+        .logo_section{
+            width: 100%;
+            @include Flex;
+            p,
+            .FooterTItleWithSeparator,
+            .media_container{
+                display: none;
+            }
+        }
+        .contact_links_section{
+            width: 100%;
+            border: none;
+            .responsive_sections{
+                @include Flex;
+                flex-direction: column;
+                // height: 200px;
+            }
+        }
+        .home_links_section ,
+        .service_links_section,
+        .quick_links_section{
+            display: none;
+        }
+    }
+    
+    
+}
